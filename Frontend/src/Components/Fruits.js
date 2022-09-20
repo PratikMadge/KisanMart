@@ -53,14 +53,17 @@ const Fruits = () => {
     return (
         <>
             <div className="container">
+              
                 <div className="row g-3">
                     {fruits.map((item) => (
                         <div className="col-4">
+                            <br></br>
                             <div className="card " key={item.id}>
                                 <div onClick={() => history.push(`/product/${item.id}`)}>
-
+                                   
                                     <img src={item.imageUrl} height={150} width={25} className="card-img-top px-5" alt="..." />
                                     <div className="card-body">
+                                        
                                         <h5 className="card-title">{item.title}</h5>
                                         <p className="card-text description-box overflow-auto">{item.description}</p>
                                         <h5>{item.rate} Rs.</h5>
