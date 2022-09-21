@@ -73,7 +73,7 @@ const AddProduct = () => {
         category,
       };
       axios
-        .post(url + "/addproduct", product, {
+        .post(url + "/vendor/addproduct", product, {
           headers: { authorization: `Bearer ${token}` },
         })
         .then((response) => {

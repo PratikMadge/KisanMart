@@ -2,6 +2,7 @@ package com.app.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -15,6 +16,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 
 import com.app.filters.JwtRequestFilter;
+
 
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -47,7 +49,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http.cors().and().csrf().disable()
 		.authorizeRequests()
 		.antMatchers("/customer/**").hasRole("CUSTOMER")
-		.antMatchers("/Vender/**").hasAnyRole("VENDOR")
+		.antMatchers("/vender/**").hasAnyRole("VENDOR")
 		.antMatchers("/admin/**").hasAnyRole("ADMIN")
 		.antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 		.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);

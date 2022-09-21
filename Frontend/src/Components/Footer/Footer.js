@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, BrowserRouter } from 'react-router-dom';
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import { Form, Button } from 'react-bootstrap'
-
+import logo from "./logo.png"
 import './Footer.css'
 
 const Footer = () => {
@@ -37,7 +37,7 @@ const Footer = () => {
                 </div>
                 <MDBContainer className="mt-5 mb-4 text-center text-md-left">
                     <MDBRow className="mt-3">
-                        <MDBCol md="4" lg="4    " xl="4" className="mb-4 dark-grey-text">
+                        <MDBCol md="4" lg="3" xl="3" className="mb-3 dark-grey-text">
                             <h6 className="text-uppercase font-weight-bold">
                                 <strong>Kisan Mart</strong>
                             </h6>
@@ -46,7 +46,7 @@ const Footer = () => {
                                 The purpose of Kisan Mart is to provide connections between different roles in the agriculture industry. As the farmers are not getting a fair price for their goods because of contractors. This app removes the requirement of contractors for farmers. 
                             </p>
                         </MDBCol>
-                        <MDBCol md="4" lg="4" xl="4" className="mb-4 dark-grey-text">
+                        <MDBCol md="4" lg="3" xl="3" className="mb-3 dark-grey-text">
                             <h6 className="text-uppercase font-weight-bold">
                                 <strong>Links</strong>
                             </h6>
@@ -57,7 +57,7 @@ const Footer = () => {
                             <p><Link to="/cart" className="dark-grey-text">Cart</Link></p>
                             <p><Link to="/aboutus" className="dark-grey-text">About Us</Link></p>
                         </MDBCol>
-                        <MDBCol md="4" lg="3" xl="4" className="mb-4 dark-grey-text">
+                        <MDBCol md="4" lg="3" xl="3" className="mb-3 dark-grey-text">
                             <h6 className="text-uppercase font-weight-bold">
                                 <strong>Contact</strong>
                             </h6>
@@ -66,6 +66,9 @@ const Footer = () => {
                             <p><i className="fa fa-envelope mr-3" /> kisanmart.cdac@gmail.com</p>
                             <p><i className="fa fa-phone mr-3" /> + 91-9876543210</p>
                             <p><i className="fa fa-print mr-3" /> + 91-8600989898</p>
+                        </MDBCol>
+                        <MDBCol md="4" lg="3    " xl="3" className="mb-3 dark-grey-text">
+                            <img src={logo} alt="" height={"180"} width={250} />
                         </MDBCol>
                     </MDBRow>
                 </MDBContainer>

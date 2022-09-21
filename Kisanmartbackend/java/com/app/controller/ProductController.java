@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,7 +27,8 @@ public class ProductController {
 	@Autowired
 	IProductServices productServices;
 	
-	@PostMapping("/addproduct")
+	
+	@PostMapping("vendor/addproduct")
 	ResponseEntity<?>addProduct(@RequestBody Product product, HttpServletRequest request){
 		System.out.println("in add");
 		return ResponseEntity.ok(productServices.addProduct(product,request.getUserPrincipal().getName()));

@@ -104,7 +104,7 @@ function App() {
           <Navbar/>
           <Contactus/>
         </Route>
-        <Route exact path='/addproduct'>
+        <Route exact path='/saddproduct'>
           <Navbar/>
           <AddProduct/>
         </Route>
